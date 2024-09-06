@@ -1,1 +1,9 @@
-var hello = "Hello World";
+const myLibrary = [];
+
+function Book(){
+
+}
+
+function addBookToLibrary(){
+    
+}
