@@ -88,7 +88,7 @@ function updateReadStatus(){
 function displayLibrary(){
     create_table();
     addLibraryToTable();
-    
+    addBookButton();
 }
 
 displayLibrary();
