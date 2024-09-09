@@ -1,5 +1,15 @@
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
+
 #table,
 th,
 td {
   border: solid darkgrey;
+}
+
+#table-header {
+  background-color: aqua;
 }
