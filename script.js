@@ -1,3 +1,6 @@
+const addBookBtn = document.querySelector("#addNewBook")
+
+
 const book1 = new Book("The Lightning Thief", "Rick Riordan",297,true);
 const book2 = new Book("The Sea of Monsters","Rick Riordan",450 ,true);
 const book3 = new Book("The Titan's Curse","Rick Riordan", 123,true);
@@ -15,7 +18,7 @@ function Book(title, author, pages, read_status){
 }
 
 function addBookToLibrary(){
-    //promppt in some way to get a the info
+    //prompt in some way to get a the info
     /*
     let title = 
     let author = 
@@ -51,25 +54,6 @@ function addRowToTable(book){
     table_row.appendChild(table_data_read_status);
 }
 
-function addBookButton(){
-    const button = document.createElement("button");
-    const container = document.querySelector("#container");
-    button.addEventListener("onclick",new_book_form());
-    button.textContent="NEW BOOK";
-    container.appendChild(button);   
-}
-
-function new_book_form(){
-    let new_book=0;
-    const dialog = document.createElement("dialog");
-    const form = document.createElement("form");
-    
-
-    dialog.appendChild(book_form);
-
-    return new_book;
-}
-
 //should be next to each book display
 function removeBookButton(){
 
@@ -81,7 +65,6 @@ function updateReadStatus(){
 
 function displayLibrary(){
     addLibraryToTable();
-    addBookButton();
 }
 
 displayLibrary();
