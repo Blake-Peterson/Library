@@ -15,6 +15,15 @@ function Book(title, author, pages, read_status){
 }
 
 function addBookToLibrary(){
+    //promppt in some way to get a the info
+    /*
+    let title = 
+    let author = 
+    let pages = 
+    let read_status = 
+    new_book = Book(title,author,pages,read_status);
+    myLibrary.push(new_book);
+    */
 
 }
 
@@ -42,38 +51,23 @@ function addRowToTable(book){
     table_row.appendChild(table_data_read_status);
 }
 
-function create_table(){
-    const container = document.querySelector("#container");
-    const table = document.createElement("table");
-    container.appendChild(table);
-    const table_header_row = document.createElement("tr");
-    table_header_row.setAttribute('id','table-header');
-    table.appendChild(table_header_row);
-    const table_header_title = document.createElement("th");
-    table_header_title.classList.add("header");
-    table_header_title.textContent="Title";
-    const table_header_author = document.createElement("th");
-    table_header_author.classList.add("header");
-    table_header_author.textContent="Author";
-    const table_header_pages = document.createElement("th");
-    table_header_pages.classList.add("header");
-    table_header_pages.textContent="Pages";
-    const table_header_read_status = document.createElement("th");
-    table_header_read_status.textContent="If Read";
-    table_header_read_status.classList.add("header");
-    table_header_row.appendChild(table_header_title);
-    table_header_row.appendChild(table_header_author);
-    table_header_row.appendChild(table_header_pages);
-    table_header_row.appendChild(table_header_read_status);
-}
-
 function addBookButton(){
     const button = document.createElement("button");
     const container = document.querySelector("#container");
-    button.addEventListener("onclick",addBookToLibrary());
-    button.textContent="Add a Book";
-    container.appendChild(button);
+    button.addEventListener("onclick",new_book_form());
+    button.textContent="NEW BOOK";
+    container.appendChild(button);   
+}
+
+function new_book_form(){
+    let new_book=0;
+    const dialog = document.createElement("dialog");
+    const form = document.createElement("form");
     
+
+    dialog.appendChild(book_form);
+
+    return new_book;
 }
 
 //should be next to each book display
@@ -86,7 +80,6 @@ function updateReadStatus(){
 }
 
 function displayLibrary(){
-    create_table();
     addLibraryToTable();
     addBookButton();
 }
