@@ -75,6 +75,14 @@ function addRowToTable(book,i){
     });
     table_row.appendChild(removeBookBtn);
 
+    const update_read_status_btn = document.createElement("button");
+    update_read_status_btn.textContent = "Change";
+    update_read_status_btn.addEventListener("click",()=>{
+        myLibrary[i].read_status= myLibrary[i].read_status ? false:true;
+        updateTable();
+    });
+    table_data_read_status.appendChild(update_read_status_btn);
+
 }
 
 function updateTable(){
