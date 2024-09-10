@@ -40,13 +40,14 @@ function addBookToLibrary(){
 
 function addLibraryToTable(){
     for(let i=0;i<myLibrary.length;i++){
-        addRowToTable(myLibrary[i]);
+        addRowToTable(myLibrary[i],i);
     }
 }
 
-function addRowToTable(book){
+function addRowToTable(book,i){
     const table_header_row=document.querySelector("table");
     const table_row = document.createElement("tr");
+    table_row.setAttribute("book-id",i);
     table_header_row.appendChild(table_row);
 
     const table_data_title = document.createElement("td");
@@ -64,10 +65,15 @@ function addRowToTable(book){
     const table_data_read_status = document.createElement("td");
     table_data_read_status.textContent = book.read_status;
     table_row.appendChild(table_data_read_status);
-}
 
-//should be next to each book display
-function removeBookButton(){
+    const removeBookBtn = document.createElement("button");
+    removeBookBtn.textContent= "Remove Book";
+    removeBookBtn.addEventListener("click",()=>{
+        table_row.remove();
+        myLibrary.remove(i);
+        updateTable();
+    });
+    table_row.appendChild(removeBookBtn);
 
 }
 
@@ -82,7 +88,6 @@ function updateTable(){
 function displayLibrary(){
     addLibraryToTable();
     addBookToLibrary();
-
 }
 
 displayLibrary();
