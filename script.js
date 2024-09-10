@@ -70,7 +70,7 @@ function addRowToTable(book,i){
     removeBookBtn.textContent= "Remove Book";
     removeBookBtn.addEventListener("click",()=>{
         table_row.remove();
-        myLibrary.remove(i);
+        myLibrary.splice(i,1);
         updateTable();
     });
     table_row.appendChild(removeBookBtn);
