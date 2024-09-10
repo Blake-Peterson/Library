@@ -10,7 +10,7 @@ td {
   border: solid darkgrey;
 }
 
-#table-header {
+th {
   background-color: aqua;
 }
 
@@ -29,6 +29,13 @@ input {
   padding: 0 0 0 8px;
 }
 
+td button {
+  width: 4vw;
+  height: auto;
+  font-size: small;
+}
+
 button {
   border-radius: 1em;
+  margin-right: 1vw;
 }

@@ -27,7 +27,6 @@ function addBookToLibrary(){
         const bookPages = document.querySelector("#pages");
         const bookRead = document.querySelector("#already_read");
         const new_book = new Book(bookTitle.value,bookAuthor.value,bookPages.value,bookRead.checked);
-        console.log(new_book);
         myLibrary.push(new_book);
         updateTable();
         dialog.close();
