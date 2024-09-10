@@ -22,25 +22,28 @@
                 </tr>
             </table>
         </div>
-        <div>
-            <dialog>
-                <form id="new-book-form">
+        <dialog>
+            <form method="dialog" id="new-book-form">
+                <div>                
                     <label for="title">Title</label>
                     <input type="text" id="title">
-    
+                </div>
+                <div>
                     <label for="author">Author</label>
                     <input type="text" id="author">
-    
+                </div>
+                <div>
                     <label for="pages">Pages</label>
                     <input type="text" id="pages">
-    
+                </div>
+                <div>
                     <label for="already_read">Read?</label>
                     <input type="checkbox" id="already_read">
-    
-                    <button type="submit" id="addNewBook">ADD BOOK</button>
-                </form>
-            </dialog>
-        </div>
+                </div>
+                <button autofocus id="addNewBook">Finish</button>
+            </form>
+        </dialog>
+        <button id="Add-Book"> ADD BOOK</button>
     </div>
     <script src="script.js"></script>
 </body>

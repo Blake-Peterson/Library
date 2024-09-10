@@ -1,4 +1,6 @@
-const addBookBtn = document.querySelector("#addNewBook")
+const dialog= document.querySelector("dialog");
+const finishBook = document.querySelector("#Add-Book");
+const enterBookInfo = document.querySelector("#addNewBook");
 
 
 const book1 = new Book("The Lightning Thief", "Rick Riordan",297,true);
@@ -59,12 +61,23 @@ function removeBookButton(){
 
 }
 
+function addBookButton(){
+    enterBookInfo.addEventListener("click",()=>{
+        dialog.close();
+    }); 
+    finishBook.addEventListener("click",()=> {
+        dialog.showModal();
+    });  
+}
+
+
 function updateReadStatus(){
 
 }
 
 function displayLibrary(){
     addLibraryToTable();
+    addBookButton();
 }
 
 displayLibrary();
